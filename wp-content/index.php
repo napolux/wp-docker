@@ -1,0 +1,2 @@
+<?php
+// Hello, wp-docker
