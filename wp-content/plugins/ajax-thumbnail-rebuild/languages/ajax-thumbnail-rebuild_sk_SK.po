@@ -1,0 +1,100 @@
+# Copyright (C) 2010 AJAX Thumbnail Rebuild
+# This file is distributed under the same license as the AJAX Thumbnail Rebuild package.
+msgid ""
+msgstr ""
+"Project-Id-Version: AJAX Thumbnail Rebuild 1.05\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/ajax-thumbnail-rebuild\n"
+"POT-Creation-Date: 2011-12-02 18:11:04+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-01-16 12:23+0300\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: ajax-thumbnail-rebuild.php:33
+msgid "Rebuild all Thumbnails"
+msgstr "Obnoviť všetky miniatúry"
+
+#: ajax-thumbnail-rebuild.php:33
+msgid "Rebuild Thumbnails"
+msgstr "Prestavať miniatúry"
+
+#: ajax-thumbnail-rebuild.php:50
+msgid "Reading attachments..."
+msgstr "Čítanie prílohy..."
+
+#: ajax-thumbnail-rebuild.php:71
+msgid "No attachments found."
+msgstr "Žiadne prílohy našiel."
+
+#: ajax-thumbnail-rebuild.php:79
+msgid "Done."
+msgstr "Hotovo."
+
+#: ajax-thumbnail-rebuild.php:101
+msgid "Error"
+msgstr "Chyba"
+
+#: ajax-thumbnail-rebuild.php:118
+msgid "Select which thumbnails you want to rebuild"
+msgstr "Vyberte ktoré miniatúry chcete obnoviť"
+
+#: ajax-thumbnail-rebuild.php:119
+msgid "Toggle all"
+msgstr "Prepnúť všetky"
+
+#: ajax-thumbnail-rebuild.php:129
+msgid "cropped"
+msgstr "orezané"
+
+#: ajax-thumbnail-rebuild.php:136
+msgid "Only rebuild featured images"
+msgstr "Len obnovu obrázkov"
+
+#: ajax-thumbnail-rebuild.php:139
+msgid ""
+"Note: If you've changed the dimensions of your thumbnails, existing "
+"thumbnail images will not be deleted."
+msgstr ""
+"Poznámka: Ak ste zmenili rozmery miniatúr, existujúce náhľadmi sa "
+"neodstránia."
+
+#: ajax-thumbnail-rebuild.php:143
+msgid "Rebuild All Thumbnails"
+msgstr "Obnoviť všetky miniatúry"
+
+#: ajax-thumbnail-rebuild.php:147
+msgid "Last image"
+msgstr "Posledný obrázok"
+
+#: ajax-thumbnail-rebuild.php:150
+msgid ""
+"If you find this plugin useful, I'd be happy to read your comments on the % "
+"splugin homepage%s. If you experience any problems, feel free to leave a "
+"comment too."
+msgstr ""
+"Ak zistíte, že tento plugin užitočné, budem rád, že čítať vaše komentáre na "
+"domovskej stránke % splugin % s. Ak sa vyskytnú nejaké problémy, neváhajte a "
+"zanechať komentár príliš."
+
+#. Plugin Name of the plugin/theme
+msgid "AJAX Thumbnail Rebuild"
+msgstr "AJAX náhľad prestavať"
+
+#. Plugin URI of the plugin/theme
+msgid "http://breiti.cc/wordpress/ajax-thumbnail-rebuild"
+msgstr "http://breiti.cc/wordpress/ajax-thumbnail-rebuild"
+
+#. Description of the plugin/theme
+msgid "Rebuild all thumbnails"
+msgstr "Obnoviť všetky miniatúry"
+
+#. Author of the plugin/theme
+msgid "junkcoder"
+msgstr "junkcoder"
+
+#. Author URI of the plugin/theme
+msgid "http://breiti.cc"
+msgstr "http://breiti.cc"

@@ -1,0 +1,107 @@
+# Copyright (C) 2010 AJAX Thumbnail Rebuild
+# This file is distributed under the same license as the AJAX Thumbnail Rebuild package.
+msgid ""
+msgstr ""
+"Project-Id-Version: AJAX Thumbnail Rebuild 1.05\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/ajax-thumbnail-rebuild\n"
+"POT-Creation-Date: 2017-09-26 09:37+0300\n"
+"PO-Revision-Date: 2017-09-26 09:39+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+
+#: ajax-thumbnail-rebuild.php:35
+msgid "Rebuild all Thumbnails"
+msgstr "Alle Miniaturbilder neu erstellen"
+
+#: ajax-thumbnail-rebuild.php:35
+msgid "Rebuild Thumbnails"
+msgstr "Miniaturbilder neu erstellen"
+
+#: ajax-thumbnail-rebuild.php:64 ajax-thumbnail-rebuild.php:110
+msgid "Reading attachments..."
+msgstr "Anhänge lesen..."
+
+#: ajax-thumbnail-rebuild.php:72 ajax-thumbnail-rebuild.php:139
+msgid "Done."
+msgstr "Fertig."
+
+#: ajax-thumbnail-rebuild.php:76 ajax-thumbnail-rebuild.php:163
+msgid "Error"
+msgstr "Fehler"
+
+#: ajax-thumbnail-rebuild.php:90
+msgid "Ajax Thumbnail Rebuild"
+msgstr ""
+
+#: ajax-thumbnail-rebuild.php:131
+msgid "No attachments found."
+msgstr "Keine Anhänge gefunden."
+
+#: ajax-thumbnail-rebuild.php:143
+#, php-format
+msgid "Rebuilding %s of %s (%s)..."
+msgstr "Erzeuge %s von %s (%s) neu..."
+
+#: ajax-thumbnail-rebuild.php:180
+msgid "Select which thumbnails you want to rebuild"
+msgstr "Neu zu erstellende Miniaturbilder auswählen"
+
+#: ajax-thumbnail-rebuild.php:181
+msgid "Toggle all"
+msgstr "Auswahl umkehren"
+
+#: ajax-thumbnail-rebuild.php:191
+msgid "cropped"
+msgstr "beschneiden"
+
+#: ajax-thumbnail-rebuild.php:202
+msgid "Only rebuild featured images"
+msgstr "Nur Artikelbilder neu erstellen"
+
+#: ajax-thumbnail-rebuild.php:206
+msgid ""
+"Note: If you've changed the dimensions of your thumbnails, existing "
+"thumbnail images will not be deleted."
+msgstr ""
+"Hinweis: Bei Änderung der Dimensionen werden alte Bilder nicht gelöscht."
+
+#: ajax-thumbnail-rebuild.php:209
+msgid "Rebuild All Thumbnails"
+msgstr "Alle Miniaturbilder neu erzeugen"
+
+#: ajax-thumbnail-rebuild.php:213
+msgid "Last image"
+msgstr "Letztes Bild"
+
+#: ajax-thumbnail-rebuild.php:216
+#, php-format
+msgid ""
+"If you find this plugin useful, I'd be happy to read your comments on the "
+"%splugin homepage%s. If you experience any problems, feel free to leave a "
+"comment too."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "AJAX Thumbnail Rebuild"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://breiti.cc/wordpress/ajax-thumbnail-rebuild"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Rebuild all thumbnails"
+msgstr "Miniaturbilder neu erstellen"
+
+#. Author of the plugin/theme
+msgid "junkcoder"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://breiti.cc"
+msgstr ""

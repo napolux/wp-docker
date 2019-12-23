@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1152px" height="247px" viewBox="0 0 1152 247" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Pattern Copy 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1152" height="314"></rect>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00-ATOM/DSKTP/intro/pattern2" transform="translate(0.000000, 0.000000)">
+            <g id="Pattern-Copy-5" transform="translate(0.000000, -67.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <g id="Pattern" filter="url(#filter-3)" opacity="0.7" mask="url(#mask-2)" stroke="#AB9974" stroke-width="0.2">
+                    <g transform="translate(-9231.000000, -10051.000000)">
+                        <path d="M8748.55331,9289.5481 C9225.64266,9289.5481 9612.39713,9500.46786 9612.39713,9760.65056 C9612.39713,10020.8333 9225.64266,10231.753 8748.55331,10231.753 C8271.46396,10231.753 7884.70455,10020.8333 7884.70455,9760.65056 C7884.70455,9500.46786 8271.46396,9289.5481 8748.55331,9289.5481 Z" id="Stroke-467"></path>
+                        <path d="M9263.71347,10750.6755 C9263.71347,10272.8723 9474.31811,9885.53914 9734.11208,9885.53914 C9993.90605,9885.53914 10204.5107,10272.8723 10204.5107,10750.6755 C10204.5107,11228.4787 9993.90605,11615.8119 9734.11208,11615.8119 C9474.31811,11615.8119 9263.71347,11228.4787 9263.71347,10750.6755 Z" id="Stroke-707"></path>
+                        <path d="M9734.1101,10423.602 C9368.5182,10423.602 9072.14819,10126.7885 9072.14819,9760.64957 C9072.14819,9394.51064 9368.5182,9097.69717 9734.1101,9097.69717 C10099.702,9097.69717 10396.072,9394.51064 10396.072,9760.64957 C10396.072,10126.7885 10099.702,10423.602 9734.1101,10423.602 Z" id="Stroke-733"></path>
+                        <path d="M10719.6674,9289.5481 C11196.7567,9289.5481 11583.5112,9500.46786 11583.5112,9760.65056 C11583.5112,10020.8333 11196.7567,10231.753 10719.6674,10231.753 C10242.578,10231.753 9855.82356,10020.8333 9855.82356,9760.65056 C9855.82356,9500.46786 10242.578,9289.5481 10719.6674,9289.5481 Z" id="Stroke-737"></path>
+                        <path d="M9266.2277,10662.1273 C9266.2277,10423.124 9072.76621,10229.368 8834.11498,10229.368" id="Stroke-743"></path>
+                        <path d="M10201.9747,10662.1273 C10201.9796,10423.124 10395.451,10229.368 10634.1022,10229.368" id="Stroke-745"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

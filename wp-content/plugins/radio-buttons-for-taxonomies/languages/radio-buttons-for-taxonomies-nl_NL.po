@@ -1,0 +1,78 @@
+# Copyright (C) 2014 Radio Buttons for Taxonomies
+# This file is distributed under the same license as the Radio Buttons for Taxonomies package.
+# Translators:
+# Maarten Kuiper <maarten00@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: Radio Buttons for Taxonomies\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/radio-buttons-for-taxonomies\n"
+"POT-Creation-Date: 2014-05-09 19:55:24+00:00\n"
+"PO-Revision-Date: 2015-05-11 17:58+0000\n"
+"Last-Translator: Maarten Kuiper <maarten00@gmail.com>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/radio-buttons-for-taxonomies/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: inc/class.WordPress_Radio_Taxonomy.php:130
+msgid "Most Used"
+msgstr "Meest gebruikte"
+
+#. translators: %s: add new taxonomy label
+#: inc/class.WordPress_Radio_Taxonomy.php:172
+msgid "+ %s"
+msgstr "+ %s"
+
+#: inc/class.WordPress_Radio_Taxonomy.php:258
+msgid "No %s"
+msgstr "Geen %s"
+
+#. Plugin Name of the plugin/theme
+msgid "Radio Buttons for Taxonomies"
+msgstr "Keuzerondjes voor Taxonomieën"
+
+#: inc/plugin-options.php:18
+msgid "Select taxonomies to convert to radio buttons"
+msgstr "Kies de taxonomieën die als keuzerondjes weergeven moeten worden. "
+
+#: inc/plugin-options.php:48
+msgid "Options"
+msgstr "Instellingen"
+
+#: inc/plugin-options.php:55
+msgid "Completely remove options on plugin removal"
+msgstr "Verwijder alle instellingen bij verwijderen van plug-in"
+
+#: inc/plugin-options.php:62
+msgid "Save Changes"
+msgstr "Wijzigingen opslaan"
+
+#: radio-buttons-for-taxonomies.php:90 radio-buttons-for-taxonomies.php:99
+msgid "Cheatin&#8217; huh?"
+msgstr "Vals aan het spelen?"
+
+#: radio-buttons-for-taxonomies.php:197
+msgid "Radio Buttons for Taxonomies Options Page"
+msgstr "Keuzerondjes voor Taxonomieën Instellingen Pagina"
+
+#: radio-buttons-for-taxonomies.php:262
+msgid "Settings"
+msgstr "Intstellingen"
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.kathyisawesome.com/441/radio-buttons-for-taxonomies"
+msgstr "http://www.kathyisawesome.com/441/radio-buttons-for-taxonomies"
+
+#. Description of the plugin/theme
+msgid "Use radio buttons for any taxonomy"
+msgstr "Gebruik keuzerondjes voor taxonomieën"
+
+#. Author of the plugin/theme
+msgid "Kathy Darling"
+msgstr "Kathy Darling"
+
+#. Author URI of the plugin/theme
+msgid "http://www.kathyisawesome.com"
+msgstr "http://www.kathyisawesome.com"

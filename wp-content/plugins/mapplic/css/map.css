@@ -1,0 +1,99 @@
+/* INTERACTIVE ELEMENTS */
+/* clickable elements */
+.mapplic-clickable:not(g),
+g.mapplic-clickable > * {
+	opacity: 0.4;
+	/*fill: #b7a6bd*/;
+}
+
+/* hovered elements */
+.mapplic-clickable:not(g):hover,
+g.mapplic-clickable:hover > * {
+	opacity: 0.8;
+}
+
+/* active elements */
+.mapplic-active,
+a.mapplic-active > path,
+g.mapplic-active > * {
+	fill: #343F4B;
+	opacity: 1.0 !important;
+}
+
+/* CUSTOM PINS */
+.mapplic-pin.my-new-pin { /* replace 'my-new-pin' with the name of your pin */
+	background-image: url(../images/my-new-pin.png); 	/* define the path to image file */
+	background-size: 20px 30px;
+	width: 20px;
+	height: 30px;
+	margin-left: -10px;	/* negative margins are used for */
+	margin-top: -15px;	/* defining the pin's origin */
+}
+
+/* RIGTH SIDEBAR */
+.mapplic-sidebar {
+	/*float: right;*/
+}
+
+/* ACTIVE PIN HIGHLIGH */
+.mapplic-pin.mapplic-active {
+/*
+	background-color: #91bf39 !important;
+	border-color: #91bf39 !important;
+*/
+}
+
+/* CUSTOM MAP STYLES (Mall map) */
+#landmarks-ground .mapplic-clickable,
+#landmarks-underground .mapplic-clickable,
+#landmarks-level1 .mapplic-clickable {
+	opacity: 1 !important;
+}
+
+#landmarks-ground polygon.mapplic-active,
+#landmarks-ground path.mapplic-active {
+	fill: #ADDB2C;
+}
+
+#landmarks-underground polygon.mapplic-active,
+#landmarks-underground path.mapplic-active {
+	fill: #7EE0CD;
+}
+
+#landmarks-level1 polygon.mapplic-active,
+#landmarks-level1 path.mapplic-active {
+	fill: #F9684B;
+}
+
+/* SKINS */
+/* mapplic-dark */
+.mapplic-dark .mapplic-tooltip {
+	background-color: #333;
+}
+
+.mapplic-dark .mapplic-tooltip-triangle {
+	border-color: #333 transparent transparent transparent;
+}
+
+.mapplic-dark .mapplic-bottom .mapplic-tooltip-triangle {
+	border-color: transparent transparent #333 transparent;
+}
+
+.mapplic-dark .mapplic-tooltip-title {
+	color: #fff;
+}
+
+.mapplic-dark .mapplic-tooltip-description,
+.mapplic-dark .mapplic-tooltip p {
+	color: #bbb;
+}
+
+.mapplic-dark .mapplic-tooltip-close {
+	background-image: url(../images/cross-light.png) !important;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+	.mapplic-dark .mapplic-tooltip-close {
+		background-image: url(../images/cross-light@2x.png);
+	}
+}

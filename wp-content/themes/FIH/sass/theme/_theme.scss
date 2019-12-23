@@ -1,0 +1,239 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+
+.fav-button.active {background-color: red;}
+
+
+body {
+    font-family: $swiss-reg,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    color: $tertiary-grey;
+    font-size: $font-size-base;
+}
+
+// background colors
+
+.bg-light-grey {
+    background-color:$light-grey;
+}
+
+// container
+
+.wrapper {
+    margin-top: 90px;
+}
+
+.container {
+    padding-top:1rem;
+    padding-bottom: 1rem;
+}
+
+// nav
+.navbar-dark {
+    .navbar-brand {
+        width: 100%;
+        text-align: center;
+    }
+.navbar-nav {
+    .nav-link {
+      color: white;
+      font-family: $didot-bld;
+    }
+}
+.navbar-toggler-icon {
+    background-image: url('../src/images/burger.svg');
+}
+}
+
+@media (min-width: 768px) {
+.navbar-expand-md .navbar-collapse {
+display: none !important;
+}
+.navbar-expand-md .navbar-toggler {
+    display: block;
+    border: none;
+    text-align: left;
+    width: 100%;
+}
+}
+
+ul.right-menu {
+        display: flex;
+        list-style: none;
+        margin-bottom: 0;
+        width: 100%;
+        justify-content: flex-end;
+        li {
+         margin-right: 1rem;
+            a {
+                font-family: $swiss-reg;
+            text-transform: uppercase;
+            color: $main;
+            }
+
+        }
+
+}
+
+// titles
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:  $didot-rmn;
+  font-weight: normal;
+  text-align: center;
+}
+
+h1 {
+    font-family:  $didot-bld;
+    font-size: 1.75rem;
+    color: $primary;
+    margin: 1.5rem auto;
+}
+
+h2 {
+    font-family: $swiss-med;
+    text-transform: uppercase;
+    font-size:0.75rem
+}
+
+.has-large-font-size {
+    font-family: $didot-bld;
+    font-size: 1.75rem;
+}
+
+.golden-text {
+    color:$main;
+}
+
+.swiss-bold {
+    font-family: $swiss-med;
+    text-transform: uppercase;
+}
+
+// patterns
+
+.pattern {
+    background: no-repeat center center;
+    background-size: cover;
+  &-2 { background-image: url('../src/images/pattern-2.svg');}
+  p {    padding:8em; margin-bottom: 0; }
+}
+
+// cta and buttons
+
+.wp-block-button__link {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: solid 1px $main;
+    border-radius: 0;
+    font-size: 0.75rem;
+    padding: 7px 24px;
+    text-transform: uppercase;
+    font-family: $swiss-med;
+    &__onwhite {
+        color:$main;
+        background-color: rgba(254, 254, 254, 0.5);
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+    &:hover {
+        color:$main;
+        text-decoration: none;
+    }
+}
+
+.nav-icon {
+    display: block;
+    padding: 0.3em 0 0.2em 2em;
+    margin:2em;
+    background: no-repeat left center;
+    text-transform: uppercase;
+&.back { background-image: url('../src/images/left.svg');}
+}
+
+// hero banner
+
+.wp-block-cover, .wp-block-cover-image {
+    height: 100vh;
+}
+
+// custom banner
+
+.block-banner {
+    color:$primary;
+    >div {
+        display: flex;
+        align-items: center;
+        img {width: 70%;}
+        >div {
+            margin: auto 3.5rem;
+            .block-banner-copy {
+                margin:1rem auto 1.2rem;
+            }
+        }
+    }
+    &.left {
+        >div {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+// Single story
+
+article.post {
+    background: linear-gradient(180deg, #fff 357px, $light-grey 357px);
+    .entry-meta {
+        margin-bottom: 1rem;
+    }
+    .has-large-font-size {
+        color:black;
+        font-size:1.375rem;
+        margin: 1em 0;
+    }
+    hr {
+        border-top: 1px solid $main;
+    }
+    blockquote {
+        p {
+            font-family: $didot-rmn;
+            font-size: 1.25rem;
+        }
+    }
+    .stories-block {
+        display:flex;
+        justify-content: center;
+
+        > div {
+            background-color: white;
+            margin: 1em;
+            max-width: 290px;
+        }
+        div div {
+            padding: 2em;
+            font-family: $didot-rmn;
+            text-align: center;
+            font-size: 1.25rem;
+        }
+        a:hover {text-decoration: none;}
+    }
+}
+
+
+div.stories-block {
+    display:flex;
+    justify-content: center;
+
+    > div {
+        background-color: white;
+        margin: 1em;
+        max-width: 290px;
+    }
+    div div {
+        padding: 2em;
+        font-family: $didot-rmn;
+        text-align: center;
+        font-size: 1.25rem;
+    }
+    a:hover {text-decoration: none;}
+}
+

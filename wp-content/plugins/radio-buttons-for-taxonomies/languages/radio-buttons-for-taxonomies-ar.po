@@ -1,0 +1,78 @@
+# Copyright (C) 2014 Radio Buttons for Taxonomies
+# This file is distributed under the same license as the Radio Buttons for Taxonomies package.
+# Translators:
+# Hassan, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: Radio Buttons for Taxonomies\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/radio-buttons-for-taxonomies\n"
+"POT-Creation-Date: 2014-05-09 19:55:24+00:00\n"
+"PO-Revision-Date: 2014-05-14 11:23+0000\n"
+"Last-Translator: Hassan\n"
+"Language-Team: Arabic (http://www.transifex.com/projects/p/radio-buttons-for-taxonomies/language/ar/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: inc/class.WordPress_Radio_Taxonomy.php:130
+msgid "Most Used"
+msgstr "الأكثر استخداماً"
+
+#. translators: %s: add new taxonomy label
+#: inc/class.WordPress_Radio_Taxonomy.php:172
+msgid "+ %s"
+msgstr "+ %s"
+
+#: inc/class.WordPress_Radio_Taxonomy.php:258
+msgid "No %s"
+msgstr "لا %s"
+
+#. Plugin Name of the plugin/theme
+msgid "Radio Buttons for Taxonomies"
+msgstr "أزرار راديو للتصنيفات"
+
+#: inc/plugin-options.php:18
+msgid "Select taxonomies to convert to radio buttons"
+msgstr "اختر التصنيفات المراد تحويلها إلى أزرار راديو"
+
+#: inc/plugin-options.php:48
+msgid "Options"
+msgstr "خيارات"
+
+#: inc/plugin-options.php:55
+msgid "Completely remove options on plugin removal"
+msgstr "حذف الخيارات نهائياً عند حذف الإضافة"
+
+#: inc/plugin-options.php:62
+msgid "Save Changes"
+msgstr "حفظ التغييرات"
+
+#: radio-buttons-for-taxonomies.php:90 radio-buttons-for-taxonomies.php:99
+msgid "Cheatin&#8217; huh?"
+msgstr "تغش، أليس كذلك؟"
+
+#: radio-buttons-for-taxonomies.php:197
+msgid "Radio Buttons for Taxonomies Options Page"
+msgstr "صفحة خيارات أزرار راديو للتصنيفات"
+
+#: radio-buttons-for-taxonomies.php:262
+msgid "Settings"
+msgstr "إعدادات"
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.kathyisawesome.com/441/radio-buttons-for-taxonomies"
+msgstr "http://www.kathyisawesome.com/441/radio-buttons-for-taxonomies"
+
+#. Description of the plugin/theme
+msgid "Use radio buttons for any taxonomy"
+msgstr "استخدام أزرار راديو لأية تصنيفات"
+
+#. Author of the plugin/theme
+msgid "Kathy Darling"
+msgstr "Kathy Darling"
+
+#. Author URI of the plugin/theme
+msgid "http://www.kathyisawesome.com"
+msgstr "http://www.kathyisawesome.com"

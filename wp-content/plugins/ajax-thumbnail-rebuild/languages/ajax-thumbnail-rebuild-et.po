@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Ajax Thumbnail Rebuild\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2017-09-26 09:29+0300\n"
+"PO-Revision-Date: 2017-09-26 09:37+0300\n"
+"Last-Translator: Risto Niinemets <risto@konekt.ee>\n"
+"Language-Team: \n"
+"Language: et_EE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPathExcluded-0: ../.git\n"
+"X-Poedit-SearchPathExcluded-1: .git\n"
+
+#: ../ajax-thumbnail-rebuild.php:35
+msgid "Rebuild all Thumbnails"
+msgstr "Uuenda valitud suurused"
+
+#: ../ajax-thumbnail-rebuild.php:35
+msgid "Rebuild Thumbnails"
+msgstr "Pisipiltide uuendamine"
+
+#: ../ajax-thumbnail-rebuild.php:64 ../ajax-thumbnail-rebuild.php:110
+msgid "Reading attachments..."
+msgstr "Laeme sisse pilte..."
+
+#: ../ajax-thumbnail-rebuild.php:72 ../ajax-thumbnail-rebuild.php:139
+msgid "Done."
+msgstr "Uuendatud!"
+
+#: ../ajax-thumbnail-rebuild.php:76 ../ajax-thumbnail-rebuild.php:163
+msgid "Error"
+msgstr "Viga"
+
+#: ../ajax-thumbnail-rebuild.php:90
+msgid "Ajax Thumbnail Rebuild"
+msgstr "Ajax Thumbnail Rebuild"
+
+#: ../ajax-thumbnail-rebuild.php:131
+msgid "No attachments found."
+msgstr "Pilte ei leitud."
+
+#: ../ajax-thumbnail-rebuild.php:143
+#, php-format
+msgid "Rebuilding %s of %s (%s)..."
+msgstr "Uuendame pilti %s/%s (%s)..."
+
+#: ../ajax-thumbnail-rebuild.php:180
+msgid "Select which thumbnails you want to rebuild"
+msgstr "Vali piltide suurused, mida soovid uuendada"
+
+#: ../ajax-thumbnail-rebuild.php:181
+msgid "Toggle all"
+msgstr "Vali kõik"
+
+#: ../ajax-thumbnail-rebuild.php:191
+msgid "cropped"
+msgstr "lõigatud"
+
+#: ../ajax-thumbnail-rebuild.php:202
+msgid "Only rebuild featured images"
+msgstr "Uuenda ainult tunnuspilte"
+
+#: ../ajax-thumbnail-rebuild.php:206
+msgid ""
+"Note: If you've changed the dimensions of your thumbnails, existing "
+"thumbnail images will not be deleted."
+msgstr ""
+"Märkus: kui sa oled muutnud pisipiltide suuruseid, siis olemasolevaid "
+"pisipilte ei kustutata."
+
+#: ../ajax-thumbnail-rebuild.php:209
+msgid "Rebuild All Thumbnails"
+msgstr "Uuenda valitud suurused"
+
+#: ../ajax-thumbnail-rebuild.php:213
+msgid "Last image"
+msgstr "Eelmine pilt"
+
+#: ../ajax-thumbnail-rebuild.php:216
+#, php-format
+msgid ""
+"If you find this plugin useful, I'd be happy to read your comments on the "
+"%splugin homepage%s. If you experience any problems, feel free to leave a "
+"comment too."
+msgstr ""
+"Kui see plugin on sulle kasulik, anna sellest teada %smeie kodulehel%s. "
+"Probleemide korral anna ka nendest teada."

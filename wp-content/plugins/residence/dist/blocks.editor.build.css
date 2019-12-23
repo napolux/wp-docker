@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+textarea::-webkit-input-placeholder {
+  color: white !important; }
+
+textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: white !important; }
+
+textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: white !important; }
+
+textarea:-ms-input-placeholder {
+  color: white !important; }
+
+textarea::-ms-input-placeholder {
+  color: white !important; }
+
+textarea::placeholder {
+  color: white !important; }
+
+.wp-block {
+  max-width: none; }
+
+.container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch; }
+  .container .editor-plain-text, .container .components-base-control {
+    width: 45%;
+    padding: 1%;
+    margin: 1%;
+    background-color: #AB9974;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+    height: 100% !important;
+    color: white;
+    border-radius: 0; }
+
+.wp-admin select {
+  color: white;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0;
+  padding: 3px 24px 3px 8px;
+  min-height: 28px;
+  max-width: 25rem;
+  vertical-align: middle;
+  background: #AB9974 url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2…%205-5%202%201-7%207-7-7%202-1z%22%20fill%3D%22%23555%22%2F%3E%3C%2Fsvg%3E) no-repeat right 5px top 55%;
+  background-size: 16px 16px;
+  cursor: pointer; }
+
+.components-base-control .components-base-control__field {
+  margin-bottom: 0; }
+
+h2 {
+  width: 100%; }

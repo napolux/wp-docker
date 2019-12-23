@@ -1,0 +1,76 @@
+# Copyright (C) 2019 helgatheviking
+# This file is distributed under the same license as the Radio Buttons for Taxonomies package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Radio Buttons for Taxonomies 2.0.0\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/Radio-Buttons-for-Taxonomies\n"
+"POT-Creation-Date: 2019-07-01 08:38:50+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: inc/class.WordPress_Radio_Taxonomy.php:190
+#. translators: %s: add new taxonomy label
+msgid "+ %s"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Radio Buttons for Taxonomies"
+msgstr ""
+
+#: inc/plugin-options.php:18
+msgid "Select taxonomies to convert to radio buttons"
+msgstr ""
+
+#: inc/plugin-options.php:44
+msgid "Options"
+msgstr ""
+
+#: inc/plugin-options.php:51
+msgid "Completely remove options on plugin removal"
+msgstr ""
+
+#: inc/plugin-options.php:58
+msgid "Save Changes"
+msgstr ""
+
+#: radio-buttons-for-taxonomies.php:84
+msgid "Cloning this object is forbidden."
+msgstr ""
+
+#: radio-buttons-for-taxonomies.php:93
+msgid "Unserializing instances of this class is forbidden."
+msgstr ""
+
+#: radio-buttons-for-taxonomies.php:203
+msgid "Radio Buttons for Taxonomies Options Page"
+msgstr ""
+
+#: radio-buttons-for-taxonomies.php:277
+msgid "Settings"
+msgstr ""
+
+#: radio-buttons-for-taxonomies.php:293
+msgid "Donate"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.kathyisawesome.com/441/radio-buttons-for-taxonomies"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Use radio buttons for any taxonomy so users can only select 1 term at a time"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "helgatheviking"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.kathyisawesome.com"
+msgstr ""
