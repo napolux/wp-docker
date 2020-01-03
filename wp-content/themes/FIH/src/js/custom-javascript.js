@@ -52,7 +52,7 @@ jQuery(document).ready(function ($) {
 	} );
 
 
-	// Slick slider gor neighborhood page
+	// Slick slider for neighborhood page
 
 	$('.slider').slick({
 

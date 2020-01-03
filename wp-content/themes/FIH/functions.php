@@ -121,4 +121,6 @@ wp_enqueue_script( 'stories', get_stylesheet_directory_uri() . '/src/js/stories.
         }
         add_action( 'init', 'register_my_menus' );
 
+        add_image_size( 'story-size', 356, 230, true );
+
 

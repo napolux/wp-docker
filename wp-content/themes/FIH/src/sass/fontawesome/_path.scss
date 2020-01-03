@@ -13,37 +13,3 @@
   font-weight: normal;
   font-style: normal;
 }
-
-@import url("//hello.myfonts.net/count/3a9727");
-
-
-@font-face {font-family: 'DidotLTStd-Roman';
-src: url('#{$fa-font-path}/3A9727_0_0.eot');
-src: url('#{$fa-font-path}/3A9727_0_0.eot?#iefix') format('embedded-opentype'),
-     url('#{$fa-font-path}/3A9727_0_0.woff2') format('woff2'),
-     url('#{$fa-font-path}/3A9727_0_0.woff') format('woff'),
-     url('#{$fa-font-path}/3A9727_0_0.ttf') format('truetype');}
-
-
-@font-face {font-family: 'DidotLTStd-Bold';
-  src: url('#{$fa-font-path}/3A9727_1_0.eot');
-  src: url('#{$fa-font-path}/3A9727_1_0.eot?#iefix') format('embedded-opentype'),
-  url('#{$fa-font-path}/3A9727_1_0.woff2') format('woff2'),
-  url('#{$fa-font-path}/3A9727_1_0.woff') format('woff'),
-  url('#{$fa-font-path}/3A9727_1_0.ttf') format('truetype');}
-
-
-@font-face {font-family: 'Swiss721BT-Regular';
-  src: url('#{$fa-font-path}/3A9727_2_0.eot');
-  src: url('#{$fa-font-path}/3A9727_2_0.eot?#iefix') format('embedded-opentype'),
-  url('#{$fa-font-path}/3A9727_2_0.woff2') format('woff2'),
-  url('#{$fa-font-path}/3A9727_2_0.woff') format('woff'),
-  url('#{$fa-font-path}/3A9727_2_0.ttf') format('truetype');}
-
-
-@font-face {font-family: 'Swiss721BT-Medium';
-  src: url('#{$fa-font-path}/3A9727_3_0.eot');
-  src: url('#{$fa-font-path}/3A9727_3_0.eot?#iefix') format('embedded-opentype'),
-  url('#{$fa-font-path}/3A9727_3_0.woff2') format('woff2'),
-  url('#{$fa-font-path}/3A9727_3_0.woff') format('woff'),
-  url('#{$fa-font-path}/3A9727_3_0.ttf') format('truetype');}

@@ -100,6 +100,10 @@ h2 {
     font-size: 1.75rem;
 }
 
+.has-text-align-center {
+    text-align: center;
+}
+
 .golden-text {
     color:$main;
 }
@@ -199,24 +203,9 @@ article.post {
             font-size: 1.25rem;
         }
     }
-    .stories-block {
-        display:flex;
-        justify-content: center;
-
-        > div {
-            background-color: white;
-            margin: 1em;
-            max-width: 290px;
-        }
-        div div {
-            padding: 2em;
-            font-family: $didot-rmn;
-            text-align: center;
-            font-size: 1.25rem;
-        }
-        a:hover {text-decoration: none;}
-    }
 }
+
+// 3 stories block
 
 
 div.stories-block {
@@ -235,5 +224,53 @@ div.stories-block {
         font-size: 1.25rem;
     }
     a:hover {text-decoration: none;}
+}
+
+// stories filter
+
+div.filter-button-group {
+background:$secondary-grey;
+padding: 2em 0;
+text-align: center;
+border-top:2px solid $tertiary-grey;
+a:not([href]) {
+  font-family: $swiss-med;
+  text-transform: uppercase;
+  color:white;
+  opacity: 0.4;
+  margin:1em 2em;
+  &.is-checked {
+    opacity: 1;
+  }
+    }
+}
+
+// stories grid
+
+.page-template-stories-page {
+    .site-main {
+        background-color: $light-grey;
+
+.grid {
+    div {
+        max-width: 356px;
+        padding: 1em 1em;
+        margin-top:1em;
+        a {
+            width: 100%;
+            text-align: center;
+            padding: 1em;
+            display: none;
+            background-color: white;
+
+        }
+        &:hover {
+            a { display:block;
+            }
+
+        }
+    }
+}
+}
 }
 

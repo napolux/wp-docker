@@ -29,10 +29,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<main class="site-main" id="main" role="main">
 				<div class="filter-button-group button-group js-radio-button-group">
-    <button class="button is-checked" data-filter="*">All Stories</button>
-    <button class="button" data-filter=".flatiron">flatiron stories</button>
-    <button class="button" data-filter=".happenings">Happenings</button>
-    <button class="button" data-filter=".press">Press</button>
+    <a class="button is-checked" data-filter="*">All Stories</a>
+    <a class="button" data-filter=".flatiron">flatiron stories</a>
+    <a class="button" data-filter=".happenings">Happenings</a>
+    <a class="button" data-filter=".press">Press</a>
   </div>
 
 
@@ -40,7 +40,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 
-                         <div class="grid">
+                         <div class="grid col-lg-10 mx-auto">
 					<?php
 					$post_id = 0;
 					$catquery = new WP_Query( 'posts_per_page=25' );
@@ -60,7 +60,7 @@ $post_categories = 'Not Assigned';
 
             if ( has_post_thumbnail() ) {
 				echo '<div class="element-item '. $post_categories .'">';
-				echo get_the_post_thumbnail($post_id, array( 300, 150) ) ;
+				echo get_the_post_thumbnail($post_id, "story-size") ;
 				echo '<a href="' . get_the_permalink() .'" rel="bookmark">';
 				echo get_the_title() ;
 				echo '</a></div>';

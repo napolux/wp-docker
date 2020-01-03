@@ -7194,7 +7194,7 @@ jQuery(document).ready(function ($) {
   $('#apartments').DataTable({
     "searching": false,
     "lengthChange": false
-  }); // Slick slider gor neighborhood page
+  }); // Slick slider for neighborhood page
 
   $('.slider').slick({});
 }); // image transition on accordion change -- building-amenities page
