@@ -59,16 +59,16 @@ $post_categories = 'Not Assigned';
 
 
             if ( has_post_thumbnail() ) {
-				echo '<div class="element-item '. $post_categories .'">';
+				echo '<a href="' . get_the_permalink() .'" rel="bookmark"><div class="element-item '. $post_categories .'">';
 				echo get_the_post_thumbnail($post_id, "story-size") ;
-				echo '<a href="' . get_the_permalink() .'" rel="bookmark">';
+				echo '<h3>';
 				echo get_the_title() ;
-				echo '</a></div>';
+				echo '</h3></div></a>';
             } else {
-				echo '<div class="element-item '. $post_categories .'"><img src="https://www.fillmurray.com/300/150" />';
-				echo '<a href="' . get_the_permalink() .'" rel="bookmark">';
+				echo '<a href="' . get_the_permalink() .'" rel="bookmark"><div class="element-item '. $post_categories .'"><img src="https://www.fillmurray.com/300/150" />';
+				echo '';
 				echo get_the_title() ;
-				echo '</a></div>';			}
+				echo '</div></a>';			}
 
 
 endwhile;

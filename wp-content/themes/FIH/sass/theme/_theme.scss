@@ -254,18 +254,23 @@ a:not([href]) {
 .grid {
     div {
         max-width: 356px;
-        padding: 1em 1em;
+        margin: 1em 1em;
         margin-top:1em;
-        a {
+        h3 {
             width: 100%;
             text-align: center;
             padding: 1em;
             display: none;
-            background-color: white;
+
 
         }
         &:hover {
-            a { display:block;
+            background-color: white;
+            img {
+                object-fit: cover;
+                object-position: 20% -20px;
+            }
+            h3 { display:block;
             }
 
         }
