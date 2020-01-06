@@ -2,8 +2,8 @@
 /*
  Plugin Name: Duplicate Post
  Plugin URI: https://duplicate-post.lopo.it/
- Description: Clone posts and pages.
- Version: 3.2.3
+ Description: Clone posts and pages. 
+ Version: 3.2.4
  Author: Enrico Battocchi
  Author URI: https://lopo.it
  Text Domain: duplicate-post
@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Version of the plugin
-define('DUPLICATE_POST_CURRENT_VERSION', '3.2.3' );
+define('DUPLICATE_POST_CURRENT_VERSION', '3.2.4' );
 
 
 /**
@@ -46,7 +46,13 @@ add_action( 'plugins_loaded', 'duplicate_post_load_plugin_textdomain' );
 add_filter("plugin_action_links_".plugin_basename(__FILE__), "duplicate_post_plugin_actions", 10, 4);
 
 function duplicate_post_plugin_actions( $actions, $plugin_file, $plugin_data, $context ) {
-	array_unshift($actions, "<a href=\"".menu_page_url('duplicatepost', false)."\">".esc_html__("Settings")."</a>");
+	array_unshift($actions,
+		sprintf('<a href="%s" aria-label="%s">%s</a>',
+			menu_page_url('duplicatepost', false),
+			esc_attr__( 'Settings for Duplicate Post', 'duplicate-post'),
+			esc_html__("Settings", 'default')
+		)
+	);
 	return $actions;
 }
 

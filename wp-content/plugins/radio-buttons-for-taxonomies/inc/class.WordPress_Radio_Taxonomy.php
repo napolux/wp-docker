@@ -118,8 +118,6 @@ class WordPress_Radio_Taxonomy {
 	 */
 	public function metabox( $post, $box ) {
 
-		wp_enqueue_script( 'radiotax' );
-
 		$defaults = array( 'taxonomy' => 'category' );
 		if ( ! isset( $box['args'] ) || ! is_array( $box['args'] ) ) {
 			$args = array();
@@ -479,12 +477,9 @@ class WordPress_Radio_Taxonomy {
 	/**
 	 * Add nonces to quick edit and bulk edit
 	 *
-	 * @return HTML
 	 * @since 1.7.0
 	 */
 	public function quick_edit_nonce() {
-		
-		wp_enqueue_script( 'radiotax' );
 
 		if ( $this->printNonce ) {
 			$this->printNonce = FALSE;

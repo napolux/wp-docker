@@ -91,11 +91,68 @@ function duplicate_post_clone_post_link( $link = null, $before = '', $after = ''
  */
 function duplicate_post_get_original($post = null , $output = OBJECT){
 	if ( !$post = get_post( $post ) )
-		return;
+		return null;
 	$original_ID = get_post_meta( $post->ID, '_dp_original');
 	if (empty($original_ID)) return null;
 	$original_post = get_post($original_ID[0],  $output);
 	return $original_post;
+}
+
+function duplicate_post_get_edit_or_view_link( $post ){
+	$post = get_post( $post );
+	if ( ! $post )
+		return null;
+
+	$can_edit_post    = current_user_can( 'edit_post', $post->ID );
+	$title            = _draft_or_post_title( $post );
+	$post_type_object = get_post_type_object( $post->post_type );
+
+	if ( $can_edit_post && 'trash' != $post->post_status ) {
+		return sprintf(
+			'<a href="%s" aria-label="%s">%s</a>',
+			get_edit_post_link( $post->ID ),
+			esc_attr( sprintf( __( 'Edit &#8220;%s&#8221;', 'default' ), $title ) ),
+			$title
+		);
+	} else if ( duplicate_post_is_post_type_viewable( $post_type_object ) ) {
+		if ( in_array( $post->post_status, array( 'pending', 'draft', 'future' ) ) ) {
+			if ( $can_edit_post ) {
+				$preview_link    = get_preview_post_link( $post );
+				return sprintf(
+					'<a href="%s" rel="bookmark" aria-label="%s">%s</a>',
+					esc_url( $preview_link ),
+					esc_attr( sprintf( __( 'Preview &#8220;%s&#8221;', 'default' ), $title ) ),
+					$title
+				);
+			}
+		} elseif ( 'trash' != $post->post_status ) {
+			return sprintf(
+				'<a href="%s" rel="bookmark" aria-label="%s">%s</a>',
+				get_permalink( $post->ID ),
+				/* translators: %s: post title */
+				esc_attr( sprintf( __( 'View &#8220;%s&#8221;', 'default' ), $title ) ),
+				$title
+			);
+		}
+	}
+	return $title;
+}
+
+/*
+ * Workaround for is_post_type_viewable (introduced in WP 4.4)
+ */
+function duplicate_post_is_post_type_viewable( $post_type ) {
+	if ( function_exists( 'is_post_type_viewable' ) ){
+		return is_post_type_viewable( $post_type );
+	} else {
+		if ( is_scalar( $post_type ) ) {
+			$post_type = get_post_type_object( $post_type );
+			if ( ! $post_type ) {
+				return false;
+			}
+		}
+		return $post_type->publicly_queryable || ( $post_type->_builtin && $post_type->public );
+	}
 }
 
 // Admin bar

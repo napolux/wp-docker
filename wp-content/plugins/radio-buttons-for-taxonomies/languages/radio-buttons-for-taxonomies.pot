@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the Radio Buttons for Taxonomies package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Radio Buttons for Taxonomies 2.0.0\n"
+"Project-Id-Version: Radio Buttons for Taxonomies 2.0.3\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/Radio-Buttons-for-Taxonomies\n"
-"POT-Creation-Date: 2019-07-01 08:38:50+00:00\n"
+"POT-Creation-Date: 2019-12-18 17:54:04+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: inc/class.WordPress_Radio_Taxonomy.php:190
+#: inc/class.WordPress_Radio_Taxonomy.php:188
 #. translators: %s: add new taxonomy label
 msgid "+ %s"
 msgstr ""
@@ -39,23 +39,23 @@ msgstr ""
 msgid "Save Changes"
 msgstr ""
 
-#: radio-buttons-for-taxonomies.php:84
+#: radio-buttons-for-taxonomies.php:80
 msgid "Cloning this object is forbidden."
 msgstr ""
 
-#: radio-buttons-for-taxonomies.php:93
+#: radio-buttons-for-taxonomies.php:89
 msgid "Unserializing instances of this class is forbidden."
 msgstr ""
 
-#: radio-buttons-for-taxonomies.php:203
+#: radio-buttons-for-taxonomies.php:201
 msgid "Radio Buttons for Taxonomies Options Page"
 msgstr ""
 
-#: radio-buttons-for-taxonomies.php:277
+#: radio-buttons-for-taxonomies.php:297
 msgid "Settings"
 msgstr ""
 
-#: radio-buttons-for-taxonomies.php:293
+#: radio-buttons-for-taxonomies.php:314
 msgid "Donate"
 msgstr ""
 

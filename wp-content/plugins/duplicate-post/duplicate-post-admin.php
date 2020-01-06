@@ -45,7 +45,20 @@ function duplicate_post_admin_init(){
 	if (get_option('duplicate_post_show_submitbox') == 1){
 		add_action( 'post_submitbox_start', 'duplicate_post_add_duplicate_post_button' );
 	}
-	
+
+
+	if(get_option('duplicate_post_show_original_column') == 1){
+		duplicate_post_show_original_column();
+	}
+
+	if(get_option('duplicate_post_show_original_in_post_states') == 1){
+		add_filter( 'display_post_states', 'duplicate_post_show_original_in_post_states', 10, 2);
+	}
+
+	if(get_option('duplicate_post_show_original_meta_box') == 1){
+		add_action('add_meta_boxes', 'duplicate_post_add_custom_box');
+		add_action( 'save_post', 'duplicate_post_save_quick_edit_data' );
+	}
 	/**
 	 * Connect actions to functions
 	 */
@@ -150,6 +163,9 @@ function duplicate_post_plugin_upgrade() {
 	add_option('duplicate_post_show_adminbar','1');
 	add_option('duplicate_post_show_submitbox','1');
 	add_option('duplicate_post_show_bulkactions','1');
+	add_option('duplicate_post_show_original_column','0');
+	add_option('duplicate_post_show_original_in_post_states','0');
+	add_option('duplicate_post_show_original_meta_box','0');
 	
 	$taxonomies_blacklist = get_option('duplicate_post_taxonomies_blacklist');
 	if ($taxonomies_blacklist == "") $taxonomies_blacklist = array();
@@ -191,15 +207,24 @@ function duplicate_post_plugin_upgrade() {
 function duplicate_post_show_update_notice() {
 	if(!current_user_can( 'manage_options')) return;
 	$class = 'notice is-dismissible';
-	$message = '<strong>'.sprintf(__("What's new in Duplicate Post version %s:", 'duplicate-post'), DUPLICATE_POST_CURRENT_VERSION).'</strong><br/>';
-	$message .= esc_html__('Fixes for some bugs and incompatibilities with CF7, WPML, and custom post types with custom capabilities.', 'duplicate-post').'<br/>';
-	$message .= '<em><a href="https://duplicate-post.lopo.it/">'.esc_html__('Check out the documentation', 'duplicate-post').'</a> — '.sprintf(__('Please <a href="%s">review the settings</a> to make sure it works as you expect.', 'duplicate-post'), admin_url('options-general.php?page=duplicatepost')).'</em><br/>';
-	$message .= esc_html__('Serving the WordPress community since November 2007.', 'duplicate-post').' <strong>'.sprintf(wp_kses(__('Help me develop the plugin and provide support by <a href="%s">donating even a small sum</a>.', 'duplicate-post'), array( 'a' => array( 'href' => array() ) ) ), "https://duplicate-post.lopo.it/donate").'</strong>';
+	$message = '<p style="margin: 0;"><strong>'.sprintf(__("What's new in Duplicate Post version %s:", 'duplicate-post'), DUPLICATE_POST_CURRENT_VERSION).'</strong></p>';
+	$message .= '<ul style="margin: 0; list-style: inside disc;">';
+	$message .= '<li style="margin: 0;">'.esc_html__('New options to show the original in the post list or in the edit screen!', 'duplicate-post').'</li>';
+	$message .= '<li style="margin: 0;">'.esc_html__('Accessibility of the user interface has been improved', 'duplicate-post').'</li>';
+	$message .= '</ul>';
+	$message .= '<p style="margin: 0;"><em><a href="https://duplicate-post.lopo.it/">'.esc_html__('Check out the documentation', 'duplicate-post').'</a> — '.sprintf(__('Please <a href="%s">review the settings</a> to make sure it works as you expect.', 'duplicate-post'), admin_url('options-general.php?page=duplicatepost')).'</em><br/>';
+	$message .= esc_html__('Serving the WordPress community since November 2007.', 'duplicate-post').' <strong><a href="https://duplicate-post.lopo.it/donate/">'.esc_html__('Support the plugin by making a donation or becoming a patron!', 'duplicate-post').'</a></strong></p>';
 	global $wp_version;
 	if( version_compare($wp_version, '4.2') < 0 ){
-		$message .= ' | <a id="duplicate-post-dismiss-notice" href="javascript:duplicate_post_dismiss_notice();">'.__('Dismiss this notice.').'</a>';
+		$message .= '<a id="duplicate-post-dismiss-notice" href="javascript:duplicate_post_dismiss_notice();">'.__('Dismiss this notice.', 'default').'</a>';
 	}
-	echo '<div id="duplicate-post-notice" class="'.$class.'"><p>'.$message.'</p></div>';
+	echo '<div id="duplicate-post-notice" class="'.$class.'" style="display: flex; align-items: center;">
+			<svg xmlns="http://www.w3.org/2000/svg"	style="padding: 0; margin: 10px 20px 10px 0;" width="80" height="80" viewBox="0 0 20 20">
+				<path d="M18.9 4.3c0.6 0 1.1 0.5 1.1 1.1v13.6c0 0.6-0.5 1.1-1.1 1.1h-10.7c-0.6 0-1.1-0.5-1.1-1.1v-3.2h-6.1c-0.6 0-1.1-0.5-1.1-1.1v-7.5c0-0.6 0.3-1.4 0.8-1.8l4.6-4.6c0.4-0.4 1.2-0.8 1.8-0.8h4.6c0.6 0 1.1 0.5 1.1 1.1v3.7c0.4-0.3 1-0.4 1.4-0.4h4.6zM12.9 6.7l-3.3 3.3h3.3v-3.3zM5.7 2.4l-3.3 3.3h3.3v-3.3zM7.9 9.6l3.5-3.5v-4.6h-4.3v4.6c0 0.6-0.5 1.1-1.1 1.1h-4.6v7.1h5.7v-2.9c0-0.6 0.3-1.4 0.8-1.8zM18.6 18.6v-12.9h-4.3v4.6c0 0.6-0.5 1.1-1.1 1.1h-4.6v7.1h10z"
+				fill="rgba(140,140,140,1)"/>
+			</svg>
+			<div style="margin: 0.5em 0">'.$message.'</div>
+		</div>';
 	echo "<script>
 			function duplicate_post_dismiss_notice(){
 				var data = {
@@ -225,16 +250,132 @@ function duplicate_post_dismiss_notice() {
 	wp_die();
 }
 
+function duplicate_post_show_original_column() {
+	$duplicate_post_types_enabled = get_option( 'duplicate_post_types_enabled', array( 'post', 'page' ) );
+	if ( ! is_array( $duplicate_post_types_enabled ) ) {
+		$duplicate_post_types_enabled = array( $duplicate_post_types_enabled );
+	}
+
+	if ( count( $duplicate_post_types_enabled ) ) {
+		foreach ( $duplicate_post_types_enabled as $enabled_post_type ) {
+			add_filter( "manage_{$enabled_post_type}_posts_columns", 'duplicate_post_add_original_column' );
+			add_action( "manage_{$enabled_post_type}_posts_custom_column", 'duplicate_post_show_original_item', 10, 2 );
+		}
+		add_action( 'quick_edit_custom_box', 'duplicate_post_quick_edit_remove_original', 10, 2 );
+		add_action( 'save_post', 'duplicate_post_save_quick_edit_data' );
+		add_action( 'admin_enqueue_scripts', 'duplicate_post_admin_enqueue_scripts' );
+	}
+}
+
+function duplicate_post_add_original_column( $post_columns ) {
+	$post_columns['duplicate_post_original_item'] = __( 'Original item', 'duplicate-post' );
+	return $post_columns;
+}
+
+function duplicate_post_show_original_item( $column_name, $post_id ) {
+	if ( 'duplicate_post_original_item' === $column_name ) {
+		$column_value = '<span data-no_original>-</span>';
+		$original_item = duplicate_post_get_original( $post_id );
+		if ( $original_item ) {
+			$column_value = duplicate_post_get_edit_or_view_link( $original_item );
+		}
+		echo $column_value;
+	}
+}
+
+function duplicate_post_quick_edit_remove_original( $column_name, $post_type ) {
+	if ( 'duplicate_post_original_item' != $column_name ) {
+		return;
+	}
+
+	printf(
+'<fieldset class="inline-edit-col-right" id="duplicate_post_quick_edit_fieldset">
+			<div class="inline-edit-col">
+        		<label class="alignleft">
+					<input type="checkbox" name="duplicate_post_remove_original" value="duplicate_post_remove_original">
+					<span class="checkbox-title">%s</span>
+				</label>
+			</div>
+		</fieldset>',
+		__(
+			'Delete reference to original item: <span class="duplicate_post_original_item_title_span"></span>',
+			'duplicate-post'
+			)
+	);
+}
+
+function duplicate_post_save_quick_edit_data( $post_id ) {
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+		return $post_id;
+	}
+
+	if ( ! current_user_can( 'edit_post', $post_id ) ) {
+		return $post_id;
+	}
+
+	if ( ! empty( $_POST['duplicate_post_remove_original'] ) ) {
+		delete_post_meta( $post_id, '_dp_original' );
+	}
+}
+
+function duplicate_post_show_original_in_post_states( $post_states, $post ){
+	$original_item = duplicate_post_get_original( $post->ID );
+	if ( $original_item ) {
+		// translators: Original item link (to view or edit) or title.
+		$post_states['duplicate_post_original_item'] = sprintf( __( 'Original: %s', 'duplicate-post' ), duplicate_post_get_edit_or_view_link( $original_item ) );
+	}
+	return $post_states;
+}
+
+function duplicate_post_admin_enqueue_scripts( $hook ) {
+	if ( 'edit.php' === $hook ) {
+		wp_enqueue_script( 'duplicate_post_admin_script', plugins_url( 'duplicate_post_admin_script.js', __FILE__ ), false, DUPLICATE_POST_CURRENT_VERSION, true );
+	}
+}
+
+function duplicate_post_add_custom_box(){
+	$screens = get_option('duplicate_post_types_enabled');
+	if(!is_array($screens)) $screens = array($screens);
+	foreach ($screens as $screen) {
+		add_meta_box(
+			'duplicate_post_show_original',           // Unique ID
+			'Duplicate Post',  // Box title
+			'duplicate_post_custom_box_html',  // Content callback, must be of type callable
+			$screen,                   // Post type
+			'side'
+		);
+	}
+}
+
+function duplicate_post_custom_box_html( $post ) {
+	$original_item = duplicate_post_get_original( $post->ID );
+	if ( $original_item ) {
+	?>
+	<label>
+		<input type="checkbox" name="duplicate_post_remove_original" value="duplicate_post_remove_original">
+		<?php printf( __( 'Delete reference to original item: <span class="duplicate_post_original_item_title_span">%s</span>', 'duplicate-post' ), duplicate_post_get_edit_or_view_link( $original_item ) ); ?>
+	</label>
+	<?php
+	} else { ?>
+		<script>
+			(function(jQuery){
+				jQuery('#duplicate_post_show_original').hide();
+			})(jQuery);
+		</script>
+	<?php }
+}
+
 /**
  * Add the link to action list for post_row_actions
  */
 function duplicate_post_make_duplicate_link_row($actions, $post) {
 	if (duplicate_post_is_current_user_allowed_to_copy() && duplicate_post_is_post_type_enabled($post->post_type)) {
-		$actions['clone'] = '<a href="'.duplicate_post_get_clone_post_link( $post->ID , 'display', false).'" title="'
-				. esc_attr__("Clone this item", 'duplicate-post')
+		$title = _draft_or_post_title( $post );
+		$actions['clone'] = '<a href="'.duplicate_post_get_clone_post_link( $post->ID , 'display', false).'" aria-label="'
+				. esc_attr( sprintf( __('Clone &#8220;%s&#8221;', 'duplicate-post'), $title ) )
 				. '">' .  esc_html__('Clone', 'duplicate-post') . '</a>';
-		$actions['edit_as_new_draft'] = '<a href="'. duplicate_post_get_clone_post_link( $post->ID ) .'" title="'
-				. esc_attr__('Copy to a new draft', 'duplicate-post')
+		$actions['edit_as_new_draft'] = '<a href="'. duplicate_post_get_clone_post_link( $post->ID ) .'" aria-label="'
+				. esc_attr( sprintf( __('Copy &#8220;%s&#8221; to a new draft', 'duplicate-post'), $title ) )
 				. '">' .  esc_html__('New Draft', 'duplicate-post') . '</a>';
 	}
 	return $actions;
@@ -251,7 +392,7 @@ function duplicate_post_add_duplicate_post_button() {
 	 	?>
 <div id="duplicate-action">
 	<a class="submitduplicate duplication"
-		href="<?php echo duplicate_post_get_clone_post_link( $_GET['post'] ) ?>"><?php esc_html_e('Copy to a new draft', 'duplicate-post'); ?>
+		href="<?php echo esc_url( duplicate_post_get_clone_post_link( $id ) ); ?>"><?php esc_html_e('Copy to a new draft', 'duplicate-post'); ?>
 	</a>
 </div>
 <?php
@@ -464,7 +605,8 @@ function duplicate_post_copy_attachments($new_id, $post){
 		$cloned_child = array(
 				'ID'           => $new_attachment_id,
 				'post_title'   => $child->post_title,
-				'post_exceprt' => $child->post_title,
+				'post_excerpt' => $child->post_excerpt,
+				'post_content' => $child->post_content,
 				'post_author'  => $new_post_author->ID
 		);
 		wp_update_post( wp_slash($cloned_child) );
@@ -558,7 +700,7 @@ function duplicate_post_create_duplicate($post, $status = '', $parent_id = '') {
 
 		if ($title == ''){
 			// empty title
-			$title = __('Untitled');
+			$title = __('Untitled', 'default');
 		}
 		if (get_option('duplicate_post_copystatus') == 0){
 			$new_post_status = 'draft';
@@ -651,8 +793,8 @@ function duplicate_post_create_duplicate($post, $status = '', $parent_id = '') {
 //Add some links on the plugin page
 function duplicate_post_add_plugin_links($links, $file) {
 	if ( $file == plugin_basename(dirname(__FILE__).'/duplicate-post.php') ) {
-		$links[] = '<a href="https://duplicate-post.lopo.it/">' . esc_html__('Documentation', 'duplicate-post') . '</a>';
-		$links[] = '<a href="https://duplicate-post.lopo.it/donate">' . esc_html__('Donate', 'duplicate-post') . '</a>';
+		$links[] = '<a href="https://duplicate-post.lopo.it/" aria-label="' . esc_attr__('Documentation for Duplicate Post', 'duplicate-post') . '">' . esc_html__('Documentation', 'duplicate-post') . '</a>';
+		$links[] = '<a href="https://duplicate-post.lopo.it/donate" aria-label="' . esc_attr__('Donate to support Duplicate Post', 'duplicate-post') . '">' . esc_html__('Donate', 'duplicate-post') . '</a>';
 	}
 	return $links;
 }
