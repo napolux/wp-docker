@@ -10,8 +10,8 @@ gulp watch-bs
 To run a local instence of the size via Docker:
 
 * Install docker from [https://www.docker.com/](https://www.docker.com/)
-* In Terminal:
-  cd YOUR_LOCAL_PATH
+* In Terminal: <br>
+  cd YOUR_LOCAL_PATH <br>
   docker-compose up
 
 * Your WordPress installation will be available at `http://localhost:8000`
