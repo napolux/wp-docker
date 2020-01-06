@@ -97,6 +97,10 @@ h2 {
 
 .has-large-font-size {
     font-family: $didot-bld;
+    font-size: 1.75rem;
+}
+
+.xl-font {
     font-size: 2.8125rem;
 }
 
@@ -277,5 +281,35 @@ a:not([href]) {
     }
 }
 }
+}
+
+// Floorplans table
+
+.apartments-table {
+    thead {
+        background: $primary;
+        color: white;
+        text-transform: uppercase;
+
+        th{
+            font-weight: 400 !important;
+           &.thumbnails {display:none}
+           &.sorting {
+            background-image: url('../src/images/sort.svg') !important;
+            &_asc {background-image: url('../src/images/sort_asc.svg') !important; color:$main}
+            &_desc {background-image: url('../src/images/sort_desc.svg') !important; color:$main}
+
+           }
+
+        }
+    }
+    tbody {
+        tr.odd {
+            background-color: white !important;
+        }
+        td.thumbnail {display: none;}
+    }
+
+
 }
 

@@ -11,10 +11,10 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
 
-<table id="apartments" class="display">
+<table id="apartments" class="display apartments-table">
     <thead>
         <tr>
-            <th>Thumbnail</th>
+            <th class="thumbnails">Thumbnail</th>
             <th>Residence</th>
             <th>floor</th>
             <th>Bed</th>

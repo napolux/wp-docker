@@ -181,7 +181,7 @@ function block_dynamic_render_cb ( $att ) {
 	}
 
 	$html .=	'<tr class="single-residence">';
-	$html .= '<td><a href="' . $url . '">' .$thumb .'</a></td>';
+	$html .= '<td class="thumbnail"><a href="' . $url . '">' .$thumb .'</a></td>';
     $html .=        '<td>';
 	$html .=		'<span class="card__residence">' . $residence .'</span>';
 	$html .=		'</td>';
