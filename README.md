@@ -4,18 +4,24 @@ I needed this.
 
 ## Usage
 
+To get gulp to manage scss and js compiling open Terminal and follow these instructions:
+
+
+cd YOUR_LOCAL_PATH/wp-content/themes/FIH
+npm install
+gulp watch-bs
+
+To run a local instence of the size via Docker:
+
 * Install docker from [https://www.docker.com/](https://www.docker.com/)
-* Clone this repo
-* Run `docker-compose up`
-
-## Themes & plugins development
-
-This is a really simple environment for themes & plugins development. Nothing fancy. Please be aware that:
+* In Terminal:
+  cd YOUR_LOCAL_PATH
+  docker-compose up
 
 * Your WordPress installation will be available at `http://localhost:8000`
-* the `wp-content` folder you'll find in this repo will be shared with the WordPress installation, put your code there.
 
-### Now go and make something awesome! :-)
+To import a database:
 
-# flatironhouse
-# flatironhouse
+To export a datebase:
+
+
