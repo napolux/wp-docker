@@ -18,6 +18,12 @@ To run a local instence of the size via Docker:
 
 To import a database:
 
-To export a datebase:
+To export a datebase: <br>
+* In Terminal: <br>
+cd to a folder you wish to keep your back up. i.e: cd YOUR_LOCAL_PATH/backups <br>
+
+docker exec CONTAINERNAME /usr/bin/mysqldump -u USERNAME --password=PASSWORD MYSQL_DATABASE > backup.sql
+
+Replace all in capitals with actual credentials. You may get this info from Kitematic (Docker menu > Kitematic > relevant container )
 
 
