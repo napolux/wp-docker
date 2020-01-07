@@ -14,17 +14,17 @@ defined( 'ABSPATH' ) || exit;
 <table id="apartments" class="display apartments-table">
     <thead>
         <tr>
-            <th class="thumbnails">Thumbnail</th>
-            <th>Residence</th>
-            <th>floor</th>
-            <th>Bed</th>
-            <th>Bath</th>
-            <th>sq ft/sq m</th>
-            <th>ext sq ft</th>
-            <th>com char</th>
-            <th>exp</th>
-            <th>Price</th>
-            <th>Favourites</th>
+            <th class="hide_on_table">Thumbnail</th>
+            <th class="align_left">Residence</th>
+            <th><span>floor</span></th>
+            <th><span>Bed</span></th>
+            <th><span>Bath</span></th>
+            <th><span>sq ft/sq m</span></th>
+            <th><span>ext sq ft</span></th>
+            <th><span>com char</span></th>
+            <th><span>exp</span></th>
+            <th class="hide_on_table">Price</th>
+            <th><span>Favourites</span></th>
         </tr>
     </thead>
     <tbody>

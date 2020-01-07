@@ -285,7 +285,8 @@ a:not([href]) {
 
 // Floorplans table
 
-.apartments-table {
+table.apartments-table {
+    .hide_on_table {display:none;}
     thead {
         background: $primary;
         color: white;
@@ -293,11 +294,36 @@ a:not([href]) {
 
         th{
             font-weight: 400 !important;
-           &.thumbnails {display:none}
+            font-size: 0.63rem;
+            text-align: center;
+           &.align_left {
+               text-align: left;
+           }
            &.sorting {
+            background-image: none!important;
+            span {
             background-image: url('../src/images/sort.svg') !important;
-            &_asc {background-image: url('../src/images/sort_asc.svg') !important; color:$main}
-            &_desc {background-image: url('../src/images/sort_desc.svg') !important; color:$main}
+            background-repeat: no-repeat;
+            background-position: center right;
+            padding-right: 20px;
+        }
+            &_asc {
+                background-image: none!important;
+                span {
+                background-image: url('../src/images/sort_asc.svg') !important;
+                color:$main;
+                background-repeat: no-repeat;
+            background-position: center right;
+            padding-right: 20px;
+            }}
+            &_desc  {
+                background-image: none!important;
+                span {background-image: url('../src/images/sort_desc.svg') !important;
+                color:$main;
+                background-repeat: no-repeat;
+                background-position: center right;
+               padding-right: 20px;
+            }}
 
            }
 
@@ -307,7 +333,28 @@ a:not([href]) {
         tr.odd {
             background-color: white !important;
         }
-        td.thumbnail {display: none;}
+        td{
+            text-align: center;
+            padding: 1.2rem 1rem !important;
+            &.sorting_1 {background-color:white !important}
+            &.thumbnail {display: none;}
+            &.residence {text-align: left;}
+            span.card__residence {
+                font-family:$swiss-med;
+                color:$primary;
+            }
+            .fav-button {
+                background: url('../src/images/fav.svg') no-repeat;
+                font-size: 0;
+                width: 20px;
+                height: 20px;
+                margin: 0 auto;
+                &.active {
+                    background: url('../src/images/fav_active.svg') no-repeat 2px 2px;
+                }
+
+            }
+        }
     }
 
 

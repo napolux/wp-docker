@@ -24,13 +24,15 @@ const deleteCookie = (name, path) => {
 };
 
 const saveToFavorite = name => {
-	let favButton = document.querySelector(`button[data-post-id="${name}"]`);
+	let favButton = document.querySelector(`div[data-post-id="${name}"]`);
 	if (!getCookie(name)) {
 		setCookie(name, "favourited");
 		favButton.classList.add("active");
+	//	favButton.parentElement.innerHTML = '1 <div>ddd</div>';
 	} else {
 		deleteCookie(name, "/");
 		favButton.classList.remove("active");
+	//	favButton.innerHTML += "0";
 	}
 };
 
@@ -49,6 +51,11 @@ jQuery(document).ready(function ($) {
 	$('#apartments').DataTable( {
 		"searching": false,
 		"lengthChange": false,
+		"columnDefs": [ {
+			"targets": 1,
+			"orderable": false
+			} ]
+
 	} );
 
 

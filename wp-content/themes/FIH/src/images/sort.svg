@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="12px" height="6px" viewBox="0 0 12 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="9px" height="10px" viewBox="0 0 9 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
-    <title>Fill 1</title>
+    <title>Group</title>
     <desc>Created with Sketch.</desc>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="00-ATOMS/GLOBAL/Icon/Arrows/Availability-Descending" transform="translate(0.000000, 0.000000)" fill="#F7F7F7">
-            <polygon id="Fill-1" transform="translate(6.000000, 3.000000) scale(1, -1) rotate(-270.000000) translate(-6.000000, -3.000000) " points="3 -3 3 9 9 2.99915146"></polygon>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill="#F7F7F7">
+            <g id="sort">
+                <polygon id="Fill-1" transform="translate(4.285714, 2.142857) scale(-1, 1) rotate(-90.000000) translate(-4.285714, -2.142857) " points="2.14285714 -2.14285714 2.14285714 6.42857143 6.42857143 2.14225104"></polygon>
+            </g>
+            <g id="sort-copy" transform="translate(4.285714, 7.857143) scale(1, -1) translate(-4.285714, -7.857143) translate(0.000000, 5.714286)">
+                <polygon id="Fill-1" transform="translate(4.285714, 2.142857) scale(-1, 1) rotate(-90.000000) translate(-4.285714, -2.142857) " points="2.14285714 -2.14285714 2.14285714 6.42857143 6.42857143 2.14225104"></polygon>
+            </g>
         </g>
     </g>
 </svg>
