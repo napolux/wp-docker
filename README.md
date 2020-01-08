@@ -13,7 +13,7 @@ To run a local instence of the size via Docker:
 * In Terminal: <br>
   cd YOUR_LOCAL_PATH <br>
   docker-compose up <br>
-  Full guide [https://upcloud.com/community/tutorials/wordpress-with-docker/](here)
+  Full guide [here](https://upcloud.com/community/tutorials/wordpress-with-docker/)
 
 * Your WordPress installation will be available at `http://localhost:8000`
 
