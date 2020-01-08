@@ -12,11 +12,14 @@ To run a local instence of the size via Docker:
 * Install docker from [https://www.docker.com/](https://www.docker.com/)
 * In Terminal: <br>
   cd YOUR_LOCAL_PATH <br>
-  docker-compose up
+  docker-compose up <br>
+  Full guide [https://upcloud.com/community/tutorials/wordpress-with-docker/](here)
 
 * Your WordPress installation will be available at `http://localhost:8000`
 
-To import a database:
+To import a database: <br>
+In Terminal: docker exec -i DB_CONTAINER_NAME mysql -uroot -ppassword --database=wordpress < BACKUPFILE.sql <br>
+[https://blog.shanelee.name/2017/04/09/how-to-import-and-export-databases-in-mysql-or-mariadb-with-docker/#importingthedatabaseintodockercontainer](more info here)
 
 To export a datebase: <br>
 * In Terminal: <br>
