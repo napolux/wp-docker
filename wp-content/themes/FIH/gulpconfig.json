@@ -1,6 +1,6 @@
 {
 	"browserSyncOptions": {
-		"proxy": "localhost:8000/",
+		"proxy": "localhost",
 		"notify": false
 	},
 	"browserSyncWatchFiles": ["./css/*.min.css", "./sass/theme/*.scss", "./js/*.min.js", "./**/*.php"],
