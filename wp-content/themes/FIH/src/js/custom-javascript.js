@@ -45,16 +45,21 @@ favBtns.forEach(favBtn => {
 	cookie && favBtn.classList.add("active");
 });
 
-
+// floorplans table
 
 jQuery(document).ready(function ($) {
 	$('#apartments').DataTable( {
 		"searching": false,
 		"lengthChange": false,
+		"paging": false,
+		"info": false,
 		"columnDefs": [ {
 			"targets": 1,
 			"orderable": false
-			} ]
+			} , {
+				"targets": 9,
+				"orderable": false
+				} ]
 
 	} );
 
@@ -65,6 +70,36 @@ jQuery(document).ready(function ($) {
 
 	  });
 });
+
+// floorplans table>grid view
+
+const tableViewButton = document.querySelector('.view_btn.table');
+const gridViewButton = document.querySelector('.view_btn.grid_display');
+const apartmentsTable = document.querySelector('.apartments-table');
+const residence = document.querySelector('.residence');
+const favCell = document.querySelector('.fav-cell');
+
+
+
+
+gridViewButton.onclick = function () {
+	apartmentsTable.classList.add('grid-view');
+	apartmentsTable.classList.remove('dataTable');
+	tableViewButton.classList.remove('active');
+	gridViewButton.classList.add('active')
+
+  };
+
+tableViewButton.onclick = function () {
+	apartmentsTable.classList.remove('grid-view');
+	apartmentsTable.classList.add('dataTable');
+	tableViewButton.classList.add('active');
+	gridViewButton.classList.remove('active')
+
+
+  };
+
+
 
 // image transition on accordion change -- building-amenities page
 

@@ -19,7 +19,7 @@ To run a local instence of the size via Docker:
 
 To import a database: <br>
 In Terminal: docker exec -i DB_CONTAINER_NAME mysql -uroot -ppassword --database=wordpress < BACKUPFILE.sql <br>
-[https://blog.shanelee.name/2017/04/09/how-to-import-and-export-databases-in-mysql-or-mariadb-with-docker/#importingthedatabaseintodockercontainer](more info here)
+[more info here](https://blog.shanelee.name/2017/04/09/how-to-import-and-export-databases-in-mysql-or-mariadb-with-docker/#importingthedatabaseintodockercontainer)
 
 To export a datebase: <br>
 * In Terminal: <br>

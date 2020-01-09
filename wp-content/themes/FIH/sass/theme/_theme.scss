@@ -283,9 +283,39 @@ a:not([href]) {
 }
 }
 
-// Floorplans table
+// Floorplans page
+div.table_nav {
+    margin-left:18px;
+    position: absolute;
 
-table.apartments-table {
+    button.view_btn {
+        margin-right:10px;
+        font-size: 0;
+        border:0;
+        &:focus {
+            outline: 0;
+        }
+        &:not(.active) {
+            opacity: 0.3;
+        }
+        &.table {
+            height: 17px;
+        width: 16px;
+            background: url('../src/images/view-list.svg') no-repeat;
+
+        }
+        &.grid_display {
+            height: 18px;
+        width: 176px;
+            background: url('../src/images/view-thumbnails.svg') no-repeat;
+        }
+    }
+}
+
+
+
+table{
+    &.apartments-table {
     .hide_on_table {display:none;}
     thead {
         background: $primary;
@@ -339,9 +369,35 @@ table.apartments-table {
             &.sorting_1 {background-color:white !important}
             &.thumbnail {display: none;}
             &.residence {text-align: left;}
-            span.card__residence {
+            span.card__residence a {
                 font-family:$swiss-med;
                 color:$primary;
+                font-weight: bold;
+            }
+            span.card__extArea {
+                &::before {
+                  //  content: 'ext Area';
+                  content:none;
+                }
+                &::after {
+                   content: ' sq ft';
+                }
+            }
+            span.card__sizeSF {
+                &::after {
+                    content: ' sq ft | ';
+                }
+            }
+            span.card__sizeM {
+                &::after {
+                    content: ' sq m';
+                }
+            }
+
+            span.card__ComCharges {
+                &::before {
+                  content:'$';
+                }
             }
             .fav-button {
                 background: url('../src/images/fav.svg') no-repeat;
@@ -359,4 +415,91 @@ table.apartments-table {
 
 
 }
+&.grid-view {
+    .hide_on_table {display:block;}
+    thead {
+        display:block;
+        th{
+            padding: 5px 18px;
+            &:nth-child(1), &:nth-child(2), &:nth-child(10), &:nth-child(11) {
+            display:none;
+        }
+    }
+    }
+    tbody {
+        display:flex;
+        flex-wrap: wrap;
+        padding: 4% 0 0 9%;
+        tr {
+            max-width: 44%;
+            border: 1px solid $light-grey;
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+margin: 0 3% 3% 0;
 
+            td {
+                padding:0.15em 1.25em !important;
+                text-align: left;
+                &.thumbnail {grid-area: 1 / 1 / 10 / 3;
+                             padding:0 !important;
+                             display:block;
+                             background-color: $light-grey !important;
+                }
+                &:nth-child(2) {
+                    grid-area: 1 / 3 / 2 / 5;
+                    a {
+                        font-size:1.125rem;
+                        font-weight: bold;
+
+                    }
+                }
+
+                &:nth-child(3) {
+                    grid-area: 2 / 3 / 3 / 5;
+                    span {
+                        &::after {
+                        content:'th floor';
+                        margin-left: -5px;
+                    }
+                }
+
+                }
+                &:nth-child(4) {
+                    grid-area: 3 / 3 / 4 / 4;
+                    padding-right: 0 !important;
+                    span {
+                        &::after {
+                        content:'Bedrooms/';
+                    }
+                    }
+                }
+                &:nth-child(5) {
+                    grid-area: 3 / 4 / 4 / 5;
+                    padding-left: 0 !important;
+                    span {
+                        &::after {
+                        content:'Bathrooms';
+                    }
+                    }
+
+                }
+                &:nth-child(6) { grid-area: 4 / 3 / 5 / 5; }
+                &:nth-child(7) { grid-area: 5 / 3 / 6 / 5; }
+                &:nth-child(8) { grid-area: 6 / 3 / 7 / 5; }
+                &:nth-child(9) { grid-area: 7 / 3 / 8 / 5; }
+                &:nth-child(10) { grid-area: 8 / 3 / 9 / 5; }
+                &:nth-child(11) { grid-area: 9 / 3 / 10 / 5; }
+                .fav-button {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                }
+            }
+        }
+    }
+}
+}

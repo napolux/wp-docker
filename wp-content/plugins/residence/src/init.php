@@ -116,7 +116,7 @@ function block_dynamic_render_cb ( $att ) {
 	if(!empty($att['post_Id'])){
 		$thumb = get_the_post_thumbnail( $postId );
 	} else {
-		$thumb = wp_get_attachment_image( 11, array('700', '600'), "", array( "class" => "img-responsive" ) );
+		$thumb = wp_get_attachment_image( 11, array('232', '264'), "", array( "class" => "img-responsive" ) );
 	}
 
 	if(!empty($att['residence'])){
@@ -179,43 +179,36 @@ function block_dynamic_render_cb ( $att ) {
 	} else {
 		$price = '0';
 	}
-
 	$html .=	'<tr class="single-residence">';
-	$html .= '<td class="thumbnail"><a href="' . $url . '">' .$thumb .'</a></td>';
-    $html .=        '<td class="residence">';
-	$html .=		'<span class="card__residence">' . $residence .'</span>';
+	$html .=        '<td class="thumbnail"><a href="' . $url . '">' .$thumb .'</a></td>';
+	$html .=        '<td class="residence">';
+	$html .=		'<span class="card__residence"><a href="' . $url . '">' . $residence .'</a></span>';
 	$html .=		'</td>';
-	$html .=  ' <td>';
+	$html .=        '<td>';
 	$html .=		' <span class="card__floor">' . $floor. ' </span>';
-	$html .=		' <span class="hide_on_table">floor</span>';
 	$html .=		'</td>';
 	$html .=		'<td>';
 	$html .=		'<span class="card__bedrooms">' . $bedrooms . ' </span>';
-	$html .=		'<span class="hide_on_table">bedrooms</span>';
 	$html .=		'</td>';
 	$html .=		'<td>';
 	$html .=		'<span class="card__bathrooms">' . $bathrooms . ' </span>';
-	$html .=		 '<span class="hide_on_table">bathrooms</span>';
 	$html .=		'</td>';
 	$html .=			'<td>';
-	$html .=			'<span class="card__sizeSF">' . $sizeSF . '</span> sq ft | ';
-	$html .=			'<span class="card__sizeM">' . $sizeM . ' </span> sq m';
+	$html .=			'<span class="card__sizeSF">' . $sizeSF . '</span>';
+	$html .=			'<span class="card__sizeM">' . $sizeM . ' </span>';
 	$html .=		'</td>';
 	$html .=		'<td>';
-	$html .=		'<span class="hide_on_table"> ext Area </span>';
-	$html .=			'<span class="card__extArea">' . $extArea . '</span> sq ft';
+	$html .=			'<span class="card__extArea">' . $extArea . '</span>';
 	$html .=		'</td>';
 	$html .=		'<td >';
-	$html .=			'<span class="hide_on_table">Com charges </span>$';
 	$html .=			'<span class="card__ComCharges">' . $comCharges . '</span></td>';
 	$html .=		'<td>';
 	$html .=			'<span class="card__exposure">' . $exposure . '</span>';
-	$html .=		    '<span class="hide_on_table"> Exposure</span>';
 	$html .=		'</td>';
 	$html .=		'<td class="hide_on_table" >';
 	$html .=			'<span>Price: </span>$';
 	$html .=			'<span class="card__price">' . $price . '</span></td>';
-	$html .= '<td><div class="fav-button" data-post-id=' . $postId .'>0</div></td> ';
+	$html .= '<td class="fav-cell"><div class="fav-button" data-post-id=' . $postId .'>0</div></td>';
 	$html .=		'</tr>';
 
 
