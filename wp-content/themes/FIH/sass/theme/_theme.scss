@@ -421,6 +421,7 @@ table{
         display:block;
         th{
             padding: 5px 18px;
+            width: auto !important;
             &:nth-child(1), &:nth-child(2), &:nth-child(10), &:nth-child(11) {
             display:none;
         }
@@ -429,9 +430,9 @@ table{
     tbody {
         display:flex;
         flex-wrap: wrap;
-        padding: 4% 0 0 9%;
+        padding: 4% 0 0 2%;
         tr {
-            max-width: 44%;
+            max-width: 47%;
             border: 1px solid $light-grey;
             position: relative;
             display: grid;
@@ -471,6 +472,8 @@ margin: 0 3% 3% 0;
                 &:nth-child(4) {
                     grid-area: 3 / 3 / 4 / 4;
                     padding-right: 0 !important;
+                    color:$main;
+                    text-transform: uppercase;
                     span {
                         &::after {
                         content:'Bedrooms/';
@@ -480,6 +483,8 @@ margin: 0 3% 3% 0;
                 &:nth-child(5) {
                     grid-area: 3 / 4 / 4 / 5;
                     padding-left: 0 !important;
+                    color:$main;
+                    text-transform: uppercase;
                     span {
                         &::after {
                         content:'Bathrooms';
@@ -488,9 +493,25 @@ margin: 0 3% 3% 0;
 
                 }
                 &:nth-child(6) { grid-area: 4 / 3 / 5 / 5; }
-                &:nth-child(7) { grid-area: 5 / 3 / 6 / 5; }
-                &:nth-child(8) { grid-area: 6 / 3 / 7 / 5; }
-                &:nth-child(9) { grid-area: 7 / 3 / 8 / 5; }
+                &:nth-child(7) {
+                    grid-area: 5 / 3 / 6 / 5;
+                    &::before {
+                        content:'Ext area ';
+                    }
+
+                }
+                &:nth-child(8) {
+                    grid-area: 6 / 3 / 7 / 5;
+                    &::before {
+                        content:'Com Carges ';
+                    }
+                }
+                &:nth-child(9) {
+                    grid-area: 7 / 3 / 8 / 5;
+                    &::after {
+                        content:' Exposure';
+                    }
+                }
                 &:nth-child(10) { grid-area: 8 / 3 / 9 / 5; }
                 &:nth-child(11) { grid-area: 9 / 3 / 10 / 5; }
                 .fav-button {
